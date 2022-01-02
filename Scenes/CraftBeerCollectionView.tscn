@@ -13,6 +13,9 @@ __meta__ = {
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title Label" type="Label" parent="HBoxContainer"]
 margin_right = 165.0
@@ -23,6 +26,13 @@ text = "Craft Beer Collection View"
 margin_top = 18.0
 margin_right = 165.0
 margin_bottom = 38.0
-text = "Beer"
+text = "Sample Beer"
+
+[node name="BrewButton" type="Button" parent="HBoxContainer"]
+margin_top = 42.0
+margin_right = 165.0
+margin_bottom = 62.0
+text = "Brew Beer!"
 
 [connection signal="pressed" from="HBoxContainer/BeerButton" to="." method="_on_BeerButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/BrewButton" to="." method="_on_BrewButton_pressed"]

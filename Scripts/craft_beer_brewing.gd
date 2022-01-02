@@ -8,7 +8,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,9 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_BeerButton_pressed():
-	get_tree().change_scene("res://Scenes/BeerDescriptionGUI.tscn")
-
-
-func _on_BrewButton_pressed():
-	get_tree().change_scene("res://Scenes/CraftBeerBrewingView.tscn")
+func _on_Back_pressed():
+	get_tree().change_scene("res://Scenes/CraftBeerCollectionView.tscn")
