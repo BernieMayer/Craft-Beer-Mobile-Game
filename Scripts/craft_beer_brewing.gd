@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://Scenes/CraftBeerCollectionView.tscn")
+	if get_tree().change_scene("res://Scenes/CraftBeerCollectionView.tscn") != OK:
+		print("An unexpected error occured when trying to switch to the Craft Beer Collection View Scene")

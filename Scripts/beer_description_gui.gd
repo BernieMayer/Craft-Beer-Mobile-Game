@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://Scenes/CraftBeerCollectionView.tscn")
+	if get_tree().change_scene("res://Scenes/CraftBeerCollectionView.tscn") != OK:
+		print("An error occured when trying to go back to the Collection View")

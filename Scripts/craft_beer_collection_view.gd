@@ -17,8 +17,10 @@ func _ready():
 
 
 func _on_BeerButton_pressed():
-	get_tree().change_scene("res://Scenes/BeerDescriptionGUI.tscn")
+	if get_tree().change_scene("res://Scenes/BeerDescriptionGUI.tscn") != OK:
+		print("An expected error occured when trying to view a Beer")
 
 
 func _on_BrewButton_pressed():
-	get_tree().change_scene("res://Scenes/CraftBeerBrewingView.tscn")
+	if get_tree().change_scene("res://Scenes/CraftBeerBrewingView.tscn") != OK:
+		print("An expect error occured attempting to go the craft beer brewing view")
