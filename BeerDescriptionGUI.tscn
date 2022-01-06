@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Images/icon.png" type="Texture" id=1]
+
+[node name="BeerDescriptionGUI" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainHbox" type="HBoxContainer" parent="."]
+margin_right = 185.0
+margin_bottom = 151.0
+
+[node name="MainVbox" type="VBoxContainer" parent="MainHbox"]
+margin_right = 185.0
+margin_bottom = 151.0
+
+[node name="Beer Title View" type="Label" parent="MainHbox/MainVbox"]
+margin_right = 185.0
+margin_bottom = 31.0
+text = "Beer Description View
+"
+align = 1
+
+[node name="BeerDetailsVbox" type="HBoxContainer" parent="MainHbox/MainVbox"]
+margin_top = 35.0
+margin_right = 185.0
+margin_bottom = 99.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BeerImage" type="TextureRect" parent="MainHbox/MainVbox/BeerDetailsVbox"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 1 )
+
+[node name="BeerDescription" type="Label" parent="MainHbox/MainVbox/BeerDetailsVbox"]
+margin_left = 68.0
+margin_top = 25.0
+margin_right = 185.0
+margin_bottom = 39.0
+text = "This is a craft beer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ingredients" type="Label" parent="MainHbox/MainVbox"]
+margin_top = 103.0
+margin_right = 185.0
+margin_bottom = 117.0
+text = "Ingredients:"
+align = 1
+
+[node name="IngredientsContent" type="RichTextLabel" parent="MainHbox/MainVbox"]
+margin_top = 121.0
+margin_right = 185.0
+margin_bottom = 151.0
+text = "-Blonde ale
+-Raspberry"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
