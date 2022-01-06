@@ -1,21 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Images/icon.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/beer_description_gui.gd" type="Script" id=2]
 
 [node name="BeerDescriptionGUI" type="MarginContainer"]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MainHbox" type="HBoxContainer" parent="."]
 margin_right = 185.0
-margin_bottom = 151.0
+margin_bottom = 175.0
 
 [node name="MainVbox" type="VBoxContainer" parent="MainHbox"]
 margin_right = 185.0
-margin_bottom = 151.0
+margin_bottom = 175.0
 
 [node name="Beer Title View" type="Label" parent="MainHbox/MainVbox"]
 margin_right = 185.0
@@ -64,3 +66,11 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BackButton" type="Button" parent="MainHbox/MainVbox"]
+margin_top = 155.0
+margin_right = 185.0
+margin_bottom = 175.0
+text = "Back"
+
+[connection signal="pressed" from="MainHbox/MainVbox/BackButton" to="." method="_on_BackButton_pressed"]
